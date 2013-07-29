@@ -3,3 +3,10 @@
 <% else %>
 <h1>You are not logged in. You should log in!</h1> 
 <% end %>
+
+<p>Tweets</p>
+  <ul id='top_ten'>
+    <% @tweets.each do |tweet| %>
+      <li><%= tweet %></li>
+    <%end%>
+  </ul>

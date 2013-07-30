@@ -6,7 +6,6 @@ get '/' do
 end
 
 get '/username' do
-  p params
 
   @tweets = Twitter.user_timeline(params[:name], count: params[:count])
 

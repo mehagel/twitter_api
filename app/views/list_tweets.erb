@@ -2,9 +2,10 @@
  
   <h1>Here are your Tweets, DAWG</h1>
 
-<h2>Tweets</h2>
-<p>TOP Tweets</p>
-  <ul id='top_ten'>
+  <h2>Top Tweets</h2>
+  <ul id='top_tweets'>
+
+    <h3><%= @tweets[0].user[:name] %>'s Tweets:</h3>
     <br>
     <% @tweets.each do |tweet| %>
         <li><%= tweet.attrs[:text] %></li>

@@ -1,21 +1,19 @@
 enable :session
 
-# get '/' do
-#   erb :index
-# end
-
 get '/' do
-
-
-end
-
-get '/:username' do
-
-  @tweets = Tweet.new()
-  Twitter.friends.find(1).10 times do |tweet
 
   erb :index
 end
+
+get '/username' do
+  p params
+
+  @tweets = Twitter.user_timeline(params[:name], count: params[:count])
+
+  erb :list_tweets
+end
+
+
 #----------- SESSIONS -----------
 
 # get '/sessions/new' do

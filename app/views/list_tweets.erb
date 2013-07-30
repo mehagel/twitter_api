@@ -1,0 +1,15 @@
+<div class='container'>
+ 
+  <h1>Here are your Tweets, DAWG</h1>
+
+<h2>Tweets</h2>
+<p>TOP Tweets</p>
+  <ul id='top_ten'>
+    <br>
+    <% @tweets.each do |tweet| %>
+        <li><%= tweet.attrs[:text] %></li>
+        <br>
+    <%end%>
+  </ul>
+
+</div>

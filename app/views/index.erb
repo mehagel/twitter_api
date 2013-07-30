@@ -1,12 +1,12 @@
-<% if current_user %>
-<h1>You are logged in. Good job.</h1>
-<% else %>
-<h1>You are not logged in. You should log in!</h1> 
-<% end %>
+<div class='container'>
 
-<p>Tweets</p>
-  <ul id='top_ten'>
-    <% @tweets.each do |tweet| %>
-      <li><%= tweet %></li>
-    <%end%>
-  </ul>
+  <h1>Welcome to our site</h1>
+
+
+<form method='get' action='/username'>
+  Username: <Input type='text' name='name'><br>
+  Count:  <Input type='text' name='count'><br>
+  <button>Submit</button>
+</form><br/>
+
+</div>

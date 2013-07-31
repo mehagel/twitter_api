@@ -5,12 +5,14 @@ get '/' do
   erb :index
 end
 
-get '/username' do
+get '/send_tweets' do
+  p params
 
-  @tweets = Twitter.user_timeline(params[:name], count: params[:count])
+  Twitter.update(params[:tweets])
 
   erb :list_tweets
 end
+
 
 
 #----------- SESSIONS -----------
